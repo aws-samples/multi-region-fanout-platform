@@ -1,0 +1,41 @@
+{
+  "name": "db-migrations",
+  "version": "0.1.0",
+  "description": "Lambda function which manages migrations for the database.",
+  "main": "dist/handler.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+  },
+  "keywords": [
+    "Lambda",
+    "Database",
+    "Migrations",
+    "RDS"
+  ],
+  "private": true,
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.89",
+    "@types/node": "^17.0.6",
+    "@types/pg": "^8.6.3",
+    "@types/semver": "^7.3.9",
+    "@types/uuid": "^8.3.3",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
+    "aws-lambda": "^1.0.7",
+    "aws-sdk": "^2.1048.0",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-header": "^3.1.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "pg": "^8.7.1",
+    "prettier": "^2.5.1",
+    "semver": "^7.3.5",
+    "typescript": "^4.5.4",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3"
+  }
+}

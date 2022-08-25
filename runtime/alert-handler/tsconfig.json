@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "incremental": false,
+    "resolveJsonModule": true,
+    "paths": {
+      "/opt/nodejs/src/services": ["./../layers/base/src/services"],
+      "/opt/nodejs/src/utils": ["./../layers/base/src/utils"]
+    },
+  }
+}

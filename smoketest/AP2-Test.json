@@ -1,0 +1,41 @@
+{
+    "identifier": "AP2-Test-XX",
+    "sender": "alerts@ap2.de",
+    "sent": "2022-02-06T8:32:17Z",
+    "status": "Actual",
+    "msgType": "Alert",
+    "scope": "Public",
+    "code": [],
+    "info": [
+        {
+            "language": "DE",
+            "category": [
+                "Geo"
+            ],
+            "event": "Gefahreninformation",
+            "responseType": [],
+            "severity": "Extreme",
+            "eventCode": [],
+            "expires": "2022-02-06T12:32:17Z",
+            "headline": "AP2-Test-XX",
+            "description": "This is a description of the alert.",
+            "instruction": "Here are the instructions for the receivers.",
+            "parameter": [],
+            "resource": [],
+            "area": [
+                {
+                    "areaDesc": "Fiktiv 1",
+                    "polygon": [],
+                    "circle": [],
+                    "geocode": [
+                        {
+                            "valueName": "WARNCELL",
+                            "value": "10"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "any": []
+}
