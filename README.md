@@ -4,6 +4,9 @@ This project demonstrates how AWS can be used in serverless highly available act
 It shows how serverless technology can scale almost infinitely and process data in close to real time.
 Implemented using AWS CDK, it demonstrates how to work with a combined multi-account & multi-region approach using self mutating CDK pipelines.
 The solution is built following AWS best practices and with least privilege in mind and gives an idea how to build distributed components of large serverless applications securely.
+The business logic is implemented using an evolutionary hexagonal architecture as described in [this blog post](https://aws.amazon.com/blogs/compute/developing-evolutionary-architecture-with-aws-lambda/), which makes it easy to adapt and re-use it.
+
+![architecture diagram](./img/fanout-platform.png)
 
 ## Deployment Instructions
 The solution is configured to be deployed across 8 AWS accounts and two regions (eu-central-1 and eu-west-3). The AWS CodePipeline which orchestrates the deployments is supposed to be deployed to an additional "DevOps" account. The workload accounts have to be in an AWS Organizations because we use VPC subnet sharing through AWS Resource Access Manager. We recommend to deploy the Organization into a separate AWS account. Therefore, we recommend to create 10 AWS accounts for a single-stage deployment of this solution:
@@ -46,6 +49,10 @@ The solution is configured to be deployed across 8 AWS accounts and two regions 
    This will trigger the CodePipeline and deploy the solution across the individual workload accounts and regions.
 
 Future deployments will be triggered by pushes to the repository. 
+
+The image below illustrates the multiple stacks and deployment groups:
+
+![Deployment Groups and Stacks](./img/stacks.png)
 
 ## Smoke Testing
 After deployment individual alert messages can be uploaded to the Amazon S3 bucket in the website account triggering their processing in the solution. The individual AWS Lambda functions log to Amazon CloudWatch Logs in the respective AWS accounts and regions. You can check the logs to verify deployment and functionality of the solution.
